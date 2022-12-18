@@ -1,0 +1,75 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<BlockUI @ref="_pageDemo1" Timeout="@TimeSpan.FromSeconds(3)">
+
+</BlockUI>
+<BlockUI @ref="_pageDemo2" Timeout="@TimeSpan.FromSeconds(3)">
+    <Template>
+        <h1><img src="busy.gif" /> Just a moment...</h1>
+    </Template>
+</BlockUI>
+<BlockUI @ref="_pageDemo3" Timeout="@TimeSpan.FromSeconds(3)">
+
+</BlockUI>
+<BlockUI @ref="_pageDemo4" Timeout="@TimeSpan.FromSeconds(3)">
+</BlockUI>
+<BlockUI @ref="_pageDemo5" >
+</BlockUI>
+<div>
+    <button class="btn btn-primary me-1 mb-1" type="button" @onclick="@(async _ => await Callback1())">Default Message</button>
+    <button class="btn btn-primary me-1 mb-1" type="button" @onclick="@(async _ => await Callback2())">Custom Message</button>
+    <button class="btn btn-primary me-1 mb-1" type="button" @onclick="@(async _ => await Callback3())">Custom Style</button>
+    <button class="btn btn-primary me-1 mb-1" type="button" @onclick="@(async _ => await Callback4())">DOM Element as Message</button>
+    <button class="btn btn-primary me-1 mb-1" type="button" @onclick="@(async _ => await Callback5())">Spinner</button>
+</div>
+
+@code
+{
+    BlockUI? _pageDemo1;
+    BlockUI? _pageDemo2;
+    BlockUI? _pageDemo3;
+    BlockUI? _pageDemo4;
+    BlockUI? _pageDemo5;
+
+    private async Task Callback1()
+    {
+        await _pageDemo1.Block();
+    }
+
+    private async Task Callback2()
+    {
+        await _pageDemo2.Block();
+    }
+
+    private async Task Callback3()
+    {
+        await _pageDemo3.WithCss(i =>
+        {
+            i.BackgroundColor = "#f00";
+            i.Color = "#fff";
+        }).WithOverlay(i =>
+        {
+            i.BackgroundColor = "blue";
+        }).Block();
+    }
+
+    private async Task Callback4()
+    {
+        await _pageDemo4.Block(@<h1>We are processing your request.  Please be patient.</h1> );
+    }
+    private async Task Callback5()
+    {
+        await _pageDemo5.WithCss(i =>
+        {
+            i.BackgroundColor = "transparent";
+            i.Border = "none";
+            i.Width = "auto";
+        }).Block(@<div class="spinner"></div> );
+    }
+}

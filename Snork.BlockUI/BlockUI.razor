@@ -1,0 +1,14 @@
+﻿@using System.Collections.Specialized
+@inherits BlockUIBase
+@if (Visible)
+{
+    <div class="blockUI blockOuterMsg" style="@(GetOuterStyle()); align-content: center; align-items: center; justify-content: center; display: flex; flex-direction: row; height: 100%; width: 100%; position: fixed">
+        <div class="@($"blockUI {BlockMessageClass} blockPage")" style="@GetStyle()">
+            @CurrentBody
+        </div>
+    </div>
+    @if (ShowOverlay)
+    {
+        <div class="blockUI blockOverlay" style="@GetOverlayStyle()"></div>
+    }
+}

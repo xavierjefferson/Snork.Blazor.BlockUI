@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snork.Blazor.BlockUI.Web", "Snork.BlockUI.Web\Snork.Blazor.BlockUI.Web.csproj", "{7643630C-123C-44DC-9B06-6A4FB9F4E409}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snork.Blazor.BlockUI", "Snork.BlockUI\Snork.Blazor.BlockUI.csproj", "{573F2261-0908-416E-B377-1FD9B5DDE282}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7643630C-123C-44DC-9B06-6A4FB9F4E409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7643630C-123C-44DC-9B06-6A4FB9F4E409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7643630C-123C-44DC-9B06-6A4FB9F4E409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7643630C-123C-44DC-9B06-6A4FB9F4E409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573F2261-0908-416E-B377-1FD9B5DDE282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573F2261-0908-416E-B377-1FD9B5DDE282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573F2261-0908-416E-B377-1FD9B5DDE282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573F2261-0908-416E-B377-1FD9B5DDE282}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2406DB75-E6A3-4C3B-B198-97C8B5AF35DD}
+	EndGlobalSection
+EndGlobal
