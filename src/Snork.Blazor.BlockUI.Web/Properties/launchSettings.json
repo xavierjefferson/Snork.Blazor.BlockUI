@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Snork.BlockUI.Web": {
+    "Snork.Blazor.BlockUI.Web": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

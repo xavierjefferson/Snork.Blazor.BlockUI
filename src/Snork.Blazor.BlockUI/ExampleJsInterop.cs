@@ -16,7 +16,7 @@ namespace Snork.Blazor.BlockUI
         public ExampleJsInterop(IJSRuntime jsRuntime)
         {
             moduleTask = new(() => jsRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "./_content/Snork.BlockUI/exampleJsInterop.js").AsTask());
+                "import", "./_content/Snork.Blazor.BlockUI/exampleJsInterop.js").AsTask());
         }
 
         public async ValueTask<string> Prompt(string message)
